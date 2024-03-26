@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>color</title>
+        <style>
+            .button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+
+    <body>
+       <div class="button" onclick="colorChange()" >
+         <button >COLOR</button>
+       </div>
+
+       <script>
+
+        function randomNumber(min,max){
+            return (
+                Math.floor(Math.random()*(max-min+1)) + min
+            )
+        }
+        
+        function colorChange(){
+            
+            let r=randomNumber(0,255),
+                g=randomNumber(0,255),
+                b=randomNumber(0,255);
+              
+            document.body.style.backgroundColor=`rgb(${r},${g},${b})`;
+        }
+        
+        
+       </script>
+    </body>
+</html>
+
+
